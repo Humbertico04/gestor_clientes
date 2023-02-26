@@ -1,0 +1,20 @@
+@startuml
+class Cliente {
+  -dni: str
+  -nombre: str
+  -apellido: str
+  +__init__(dni: str, nombre: str, apellido: str)
+  +__str__(): str
+}
+
+class Clientes {
+  -lista: list
+  +buscar(dni: str): Cliente
+  +crear(dni: str, nombre: str, apellido: str): Cliente
+  +modificar(dni: str, nombre: str, apellido: str): Cliente
+  +borrar(dni: str): Cliente
+  +guardar(): None
+}
+
+Cliente --> Clientes
+@enduml
